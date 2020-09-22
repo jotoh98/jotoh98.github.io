@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jotoh.de</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="style.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+</head>
+<body>
+<header class="font-mono text-bold">
+    <nav>
+        <ul>
+            <li><a href="#home"><span>Home</span></a></li>
+            <li><a href="#work"><span>Work</span></a></li>
+            <li><a href="#about"><span>About me</span></a></li>
+        </ul>
+    </nav>
+</header>
+<div id="shadow"></div>
+<main>
+    <section id="home">
+        <div class="row c-2">
+            <figure class="rounded"><img src="jotoh.jpg"></figure>
+            <div class="content"><h1>Hi, I'm jotoh</h1>
+                <p class="font-mono text-secondary">I am a Computer Scientist, Java and Web-Developer in Bonn, Germany.
+                    <br><small>(Although this picture was taken in London)</small></p></div>
+        </div>
+    </section>
+    <section class="font-bold text-center" id="lang">
+        <div><p>I program in</p>
+            <p><span>Java</span><span>PHP</span><span>Kotlin</span><span>Javascript</span></p>
+            <p class="text-small text-center">And&nbsp;<a href="#langs">more</a>.</p></div>
+    </section>
+    <section id="work"><h2>My work</h2>
+        <div class="row c-2" id="work-grid">
+            <div class="tilt"><a class="lighter-bg text-center" href="https://github.com/jotoh98/treasureHunt"><img
+                    src="assets/img/treasureHunt.png">
+                <h3>treasureHunt</h3>
+                <div class="tags font-bold font-mono"><span>Java</span><span>JavaFX</span><span>Gradle</span></div>
+                <p>Application for a project group to simulate a hide and seek situation for finding a point in the
+                    plane.</p></a></div>
+            <div class="tilt"><a class="lighter-bg text-center" href="https://github.com/jotoh98/evoSearch"><img
+                    src="assets/img/evoSearch.png">
+                <h3>evoSearch</h3>
+                <div class="tags font-bold font-mono"><span>Java</span><span>Swing</span><span>jenetics</span><span>Maven</span>
+                </div>
+                <p>Implementation for my bachelors thesis about evolutionary algorithms andtheir ability to learn a
+                    strategy for the undirected search in the plane.</p></a></div>
+        </div>
+    </section>
+    <section id="about"><h2>About me</h2></section>
+    <section id="langs"><h2>Languages & Skills</h2>
+        <div class="table reverse">
+            <div class="row">
+                <figure>
+                    <div class="code font-mono" id="java-code"><span></span></div>
+                </figure>
+                <div>
+                    <div><h3>Java</h3>
+                        <p>I've been writing Java since 2017 and improved my language and design skills ever since.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <figure></figure>
+                <div><p>Hello</p></div>
+            </div>
+            <div class="row">
+                <div><img src="assets/img/treasureHunt.png"></div>
+                <div><p>Hello</p></div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

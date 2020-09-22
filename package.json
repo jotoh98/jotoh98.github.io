@@ -1,0 +1,11 @@
+{
+  "name": "jotohde",
+  "version": "1.0.0",
+  "description": "Static jotoh portfolio  homepage",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "jotoh",
+  "license": "ISC"
+}
