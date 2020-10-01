@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
     head
         meta(charset='UTF-8')
-        title='jotoh.de'
+        title='jotoh'
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet" href="style.css")
 
@@ -24,11 +24,12 @@ html(lang='en')
             section#home.bg-dark.text-light
                 .container-fluid.max-width
                     .row
-                        figure.figure.col-12.col-md-6.col-lg-7.wow.animate__animated.animate__fadeIn
+                        figure.figure.col-12.col-md-6.col-lg-7.wow.animate__animated.animate__fadeIn.text-center
                             img.rounded-lg(src="mainThumb.jpg")
                         .col-12.col-md-6.col-lg-5.align-self-center
                             h1.mt-3.text-md-left.text-center Hi, I'm jotoh
-                            p.font-mono.text-secondary I am a Computer Scientist, Java and Web-Developer in Bonn, Germany. <br>
+                            p.text-secondary.text-md-left.text-center /ʤoto/,&nbsp;Acronym&nbsp;for Jonathan&nbsp;Tobias&nbsp;Hassel
+                            p.mt-4 I am a Computer Scientist, Java and Web-Developer in Bonn, Germany. <br>
                                 small (Although this picture was taken in London)
             section#program.text-light.bg-dark.text-center.font-weight-bold
                 h3.font-weight-bold.my-0 I program in
@@ -38,7 +39,7 @@ html(lang='en')
                     span Kotlin
                     span Javascript
                 p.text-center And&nbsp;
-                    a(href="#langs") more
+                    a(href="#skills") more
                     | .
             section#work.bg-dark.text-light
                 .container
@@ -67,7 +68,7 @@ html(lang='en')
                                     Implementation for my bachelors thesis about evolutionary algorithms and
                                     their ability to learn a strategy for the undirected search in the plane.
             section#skills.bg-light
-                .container.py-5.px-0.px-lg-5.w-75
+                .container.py-5.px-0.px-lg-5
                     .row
                         .col-12.col-md-6.px-md-3.pl-md-5
                             figure.wow.animate__animated.animate__fadeIn
@@ -106,7 +107,7 @@ html(lang='en')
                                 p.text-secondary.
                                     I have already worked in a small agile environment and I want to increase my repertoire of
                                     agile and pipelining methods.
-            footer.bg-secondary.text-light.overflow-auto.py-5
+            footer.bg-secondary.text-light.overflow-auto.p-5
                 .container
                     .row.justify-content-center
                         .col-12.col-md-6.col-lg-4
@@ -123,6 +124,8 @@ html(lang='en')
                                 li
                                     a(href="https://getbootstrap.com") Bootstrap
                                 li
+                                    a(href="https://www.jetbrains.com/lp/mono/") Jetbrains Mono
+                                li
                                     a(href="https://micku7zu.github.io/vanilla-tilt.js") vanilla-tilt.js
                         .col-12.col-md-6.col-lg-4
                             h3 Legal
@@ -130,5 +133,8 @@ html(lang='en')
                             p.
                                 The libraries that I used were marked accordingly.
                                 So I think legal should be cool, eh?
+            .bg-dark.text-light.text-center.overflow-auto
+                p.my-3 Checkout the&nbsp;
+                    a(href="https://github.com/jotoh98/jotoh98.github.io") Repo
 
     script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous")

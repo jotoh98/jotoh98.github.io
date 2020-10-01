@@ -31,6 +31,10 @@ code
   #home .container-fluid
     max-width: map-get($grid-breakpoints, lg)
 
+@include media-breakpoint-down(sm)
+  #home img
+    max-width: 20rem
+
 p#lang
   background: linear-gradient(180deg, #0a8fc3 15%, #30ab4b 40%, #e3531a 65%, #eec419 100%)
   -webkit-background-clip: text
