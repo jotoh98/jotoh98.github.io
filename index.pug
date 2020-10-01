@@ -2,13 +2,16 @@ doctype html
 html(lang='en')
     head
         meta(charset='UTF-8')
-        title='jotoh'
+        title='Jonathan\'s Portfolio'
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet" href="style.css")
+        meta(name="description" content="This is the portfolio page of Bonn-based Java- and Web-Developer Jonathan Haßel.")
+        meta(name="robots" content="index, follow")
 
         script(src="script.js" defer)
         script(src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" defer)
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous")
     body.text-dark
         header.font-jetbrains.text-bold.fixed-top.py-3
             nav
@@ -27,9 +30,12 @@ html(lang='en')
                         figure.figure.col-12.col-md-6.col-lg-7.wow.animate__animated.animate__fadeIn.text-center
                             img.rounded-lg(src="assets/img/mainThumb.jpg")
                         .col-12.col-md-6.col-lg-5.align-self-center
-                            h1.mt-3.text-md-left.text-center Hi, I'm jotoh
-                            p.text-secondary.text-md-left.text-center /ʤoto/,&nbsp;Acronym&nbsp;for Jonathan&nbsp;Tobias&nbsp;Hassel
-                            p.mt-4 I am a Computer Scientist, Java and Web-Developer in Bonn, Germany. <br>
+                            h1.mt-3.text-md-left.text-center Hi, I'm Jonathan
+                            p.text-secondary.mt-4
+                                | My name is Jonathan&nbsp;Haßel.
+                                br
+                                | I am a Computer Scientist and a Java- and Web-Developer in Bonn, Germany.
+                                br
                                 small (Although this picture was taken in London)
             section#program.text-light.bg-dark.text-center.font-weight-bold
                 h3.font-weight-bold.my-0 I program in
@@ -135,6 +141,4 @@ html(lang='en')
                                 So I think legal should be cool, eh?
             .bg-dark.text-light.text-center.overflow-auto
                 p.my-3 Checkout the&nbsp;
-                    a(href="https://github.com/jotoh98/jotoh98.github.io") Repo
-
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous")
+                    a(href="https://github.com/jotoh98/jotoh98.github.io") Code
