@@ -6,6 +6,7 @@
 
 @font-face {
     font-family: "JetBrains Mono";
+    font-display: swap;
     src: url("JetBrainsMono-1.0-2.3/web/eot/JetBrainsMono-Regular.eot");
     src: url("JetBrainsMono-1.0-2.3/web/woff/JetBrainsMono-Regular.woff") format("woff");
     font-style: italic;
@@ -13,6 +14,7 @@
 
 @font-face {
     font-family: "JetBrains Mono";
+    font-display: swap;
     src: url("JetBrainsMono-1.0-2.3/web/eot/JetBrainsMono-Medium.eot");
     src: url("JetBrainsMono-1.0-2.3/web/woff/JetBrainsMono-Medium.woff") format("woff");
     font-weight: 500;
@@ -20,6 +22,7 @@
 
 @font-face {
     font-family: "JetBrains Mono";
+    font-display: swap;
     src: url("JetBrainsMono-1.0-2.3/web/eot/JetBrainsMono-Medium-Italic.eot");
     src: url("JetBrainsMono-1.0-2.3/web/woff/JetBrainsMono-Medium-Italic.woff") format("woff");
     font-weight: 500;
@@ -28,6 +31,7 @@
 
 @font-face {
     font-family: "JetBrains Mono";
+    font-display: swap;
     src: url("JetBrainsMono-1.0-2.3/web/eot/JetBrainsMono-Bold.eot");
     src: url("JetBrainsMono-1.0-2.3/web/woff/JetBrainsMono-Bold.woff") format("woff");
     font-weight: 700;
@@ -35,6 +39,7 @@
 
 @font-face {
     font-family: "JetBrains Mono";
+    font-display: swap;
     src: url("JetBrainsMono-1.0-2.3/web/eot/JetBrainsMono-Bold-Italic.eot");
     src: url("JetBrainsMono-1.0-2.3/web/woff/JetBrainsMono-Bold-Italic.woff") format("woff");
     font-weight: 700;
@@ -43,6 +48,7 @@
 
 @font-face {
     font-family: "JetBrains Mono";
+    font-display: swap;
     src: url("JetBrainsMono-1.0-2.3/web/eot/JetBrainsMono-ExtraBold.eot");
     src: url("JetBrainsMono-1.0-2.3/web/woff/JetBrainsMono-ExtraBold.woff") format("woff");
     font-weight: 800;
@@ -50,6 +56,7 @@
 
 @font-face {
     font-family: "JetBrains Mono";
+    font-display: swap;
     src: url("JetBrainsMono-1.0-2.3/web/eot/JetBrainsMono-ExtraBold-Italic.eot");
     src: url("JetBrainsMono-1.0-2.3/web/woff/JetBrainsMono-ExtraBold-Italic.woff") format("woff");
     font-weight: 800;
