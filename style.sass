@@ -1,225 +1,47 @@
-@use "css/normalize.css"
-@use "css/customNormalize"
-@use "css/lib"
 @use "assets/jetbrains.css"
+@use "node_modules/animate.css/animate.min.css"
 
-$bg-color: #080e16
-$lighter-bg: #121f32
-$primary-color: #e7ecf1
-$secondary-color: #95a0a9
-$mobile-breakpoint: 40rem
-$header-height: 6rem
+$dark: #080e16
 
-@mixin mobile
-  @media all and (max-width: $mobile-breakpoint)
-    @content
+@import "node_modules/bootstrap/scss/bootstrap"
 
-*
-  box-sizing: border-box
-  -moz-box-sizing: border-box
-  -webkit-font-smoothing: antialiased
-
-body
-  margin: 0
-  background: $bg-color
-  color: $primary-color
-  font-family: sans-serif
-  padding: $header-height 0 0
-
-h1, h2, h3, h4, h5, h6
-  margin: .5em 0
-  font-weight: bold
-
-@for $i from 1 through 6
-  h#{$i}
-    font-size: #{4/$i}rem
-
-p
-  margin: .5em 0
-
-a
-  color: inherit
-  text-decoration: none
-
-  &:hover
-    text-decoration: underline
-
-    nav &
-      text-decoration: none
-
-nav
-  font-size: 11pt
-
-  ul
-    display: flex
-    justify-content: center
-    align-content: center
-    list-style: none
-
-  a
-    display: block
-    align-content: center
-
-@include lib.keyframes(fadeIn)
-  from
-    opacity: 0
-    margin-top: -4rem
-  to
-    opacity: .8
-    margin-top: 0
-
+html
+  scroll-behavior: smooth
+  @media screen and (prefers-reduced-motion: reduce)
+    scroll-behavior: auto
 
 header
-  background: transparentize($bg-color, .2)
-  position: fixed
-  top: 0
-  width: 100%
-  z-index: 2
-  border-bottom: 1px solid transparentize($secondary-color, .5)
+  background: transparentize($dark, .2)
+  border-bottom: 1px solid transparentize($secondary, .5)
   backdrop-filter: blur(8px)
   -webkit-backdrop-filter: blur(8px)
   transform: translateZ(1000px)
 
-  a
-    line-height: $header-height
-    padding: 0 2rem
-    overflow: hidden
-    display: block
-    @include mobile
-      padding: 0 1rem
-    @media all and (max-height: 46rem)
-      line-height: $header-height * 0.75
+main > section
+  @extend .px-3, .overflow-auto
+  padding-top: 6rem !important
 
-    span
-      transition: all .2s ease-in-out
-      display: block
-      color: darken($primary-color, 20%)
-      @include lib.animate(fadeIn, .5s, 1, normal)
+figure img
+  max-width: 100%
 
-    &:hover span
-      color: $primary-color
+code
+  @extend .font-jetbrains
 
-main
-  padding: 0 2rem 4rem
+@include media-breakpoint-up(lg)
+  #home .container-fluid
+    max-width: map-get($grid-breakpoints, lg)
 
-  > * + *
-    margin-top: 5rem
-
-  section
-    max-width: 60rem
-    @extend .centered
-    padding-top: 2rem
-
-    > h2
-      margin-bottom: 2rem
-
-  img
-    max-width: 100%
-
-.rounded
-  border-radius: 1rem
-  -moz-border-radius: 1rem
-  -webkit-border-radius: 1rem
-  overflow: hidden
-
-.centered
-  margin-left: auto
-  margin-right: auto
-  display: block
-
-.text-center
-  text-align: center
-
-.text-secondary
-  color: $secondary-color
-
-.font-mono
-  font-family: "JetBrains Mono", "Courier New", monospace
-  font-weight: bold
-
-.font-bold
-  font-weight: bold
-
-.text-small
-  font-size: 50%
-
-.lighter-bg
-  background-color: #fff1
-
-.hover-effect
-  transition: color .5s
-  -webkit-text-stroke: 1pt $primary-color
-
-  &:hover
-    color: transparent
-
-.row
-  display: flex
-  flex-direction: row
-
-  > *
-    align-self: stretch
-    flex-grow: 1
-
-  &.c-2 > *
-    width: 50%
-
-  &.c-3 > *
-    width: 33.3333%
-
-  @include mobile
-    flex-direction: column
-    & > * + *
-      margin-top: 1rem
-    & > *
-      width: 100% !important
-
-#home
-  figure
-    height: 50%
-    @include mobile
-      max-width: 12rem
-
-    img
-      margin: -12.5% 0
-      @include mobile
-        margin: 0
-        border-radius: 50%
-
-  .content
-    padding: 0 2rem
-    justify-content: center
-    display: flex
-    flex-direction: column
-    @include mobile
-      padding: 0
-      margin-top: 2rem
-
-  h1
-    margin: 0
-    @include mobile
-      font-size: 3rem
-      text-align: center
-      margin-bottom: 1rem
-
-  p
-    margin: .5rem 0
-    font-size: .9rem
-
-#lang
+p#lang
+  background: linear-gradient(180deg, #0a8fc3 15%, #30ab4b 40%, #e3531a 65%, #eec419 100%)
+  -webkit-background-clip: text
   font-size: 4rem
-  @include mobile
+  line-height: 1.1
+
+  @include media-breakpoint-down(md)
     font-size: 3rem
 
-  > div
-    display: inline-block
-    text-align: left
-
-  p
-    color: white
-    background: linear-gradient(180deg, #0a8fc3 15%, #30ab4b 40%, #e3531a 65%, #eec419 100%)
-    -webkit-background-clip: text
-    margin: 0
+  &:hover
+    @extend .animate__animated, .animate__tada
 
   span
     display: block
@@ -240,176 +62,65 @@ main
     &:nth-child(4)
       color: #e29d1f
 
-  .text-small
-    -webkit-text-fill-color: white
-    font-size: .5em
-    margin-top: 1em
-    display: block
+.tilt
+  transition: transform 50ms ease-in-out
+
+.bg-lighter
+  background-color: #fff1
+
+.bg-java
+  background: linear-gradient(#e7793e, #c31b1b)
+
+.bg-javafx
+  background: linear-gradient(#3bd624, #eeca11)
+
+.bg-gradle
+  background: linear-gradient(#0bb023, #3ee755)
+
+.bg-swing
+  background: linear-gradient(0deg, #eaa119, #e0b10c)
+
+.bg-jenetics
+  background: linear-gradient(0deg, #3ec0e7, #1b53c3)
+
+.bg-maven
+  background: linear-gradient(0deg, #a63ee7, #7c3fe2)
+
+.tags span
+  @extend .d-inline-block
 
 #work
-  nav
-    flex-grow: 0
-    flex-shrink: 0
+  [data-tilt]
+    transform-style: preserve-3d
 
-    &, a
-      padding: .5rem .8rem
-      @extend .lighter-bg
-      @extend .rounded
+    img, h3
+      transform: translateZ(20px)
 
-    ul
-      display: block
+  a:hover
+    text-decoration: none
+    color: inherit !important
 
-      @include mobile
-        display: flex
-        flex-direction: row
-        white-space: nowrap
-        overflow: auto
-        justify-content: left
-
-    li + li
-      margin-top: .5rem
-      @include mobile
-        margin-top: 0
-        margin-left: .5rem
-
-    li
-      flex-shrink: 0
-
-  a
-    transition: background .2s ease-in, transform .5s ease-in-out
-
-    &:hover
-      background-color: #fff2
-      transition: background .2s ease-in
-
-
-  #work-grid
-    padding-left: 1rem
-    flex-wrap: wrap
-    align-items: stretch
-    @include mobile
-      padding-left: 0
-
-    > *
-      display: block
-      flex-grow: 0
-      padding: .5rem
-      @include mobile
-        padding: 0
-
-    a.lighter-bg
-      display: block
-      padding: 2rem 3rem 1.5rem
-      @extend .rounded
-      min-height: 100%
-      background-color: #fff1
-      background-position: 1rem -2rem
-      background-size: 2rem
-      background-repeat: no-repeat
-      background-image: url("assets/img/github-logo.svg")
-      transform-style: preserve-3d
-
-      &:hover
-        text-decoration: none
-        background-color: #fff2
-        background-position: 1rem 1rem
-
-      &:active
-        transition: transform .1s ease-out
-        transform: scale3d(.95, .95, .95)
-        background-color: #ffffff18
-
-    img
-      margin-bottom: 1.5rem
-      max-height: 8rem
-      @extend .rounded
-      @extend .centered
-
-  .tags
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    margin: 1rem 0
-
-    span
-      padding: .2rem .6rem
-      margin: .2rem
-      border-radius: 2rem
-      @extend .lighter-bg
-      flex-grow: 0
-
-      &::before
-        content: "#"
-
-#langs
-  #timeline
-    min-height: 40rem
-    width: 1rem
-
-    span
-      height: 2pt
-      background: #fff1
-      border: 2pt solid transparent
-      display: block
-      width: 100%
-
-      &:hover
-        transform: scale(2)
-
-        + span
-          height: 3pt
-
-  .code
-    background: #fff1
-    border-radius: .3rem
-    width: 100%
-    padding: 1rem
-    height: 5.6rem
-    font-size: .8rem
-    line-height: 1.2rem
-    white-space: nowrap
-
-
-#shadow
-  bottom: -.5rem
-  position: fixed
-  height: 5rem
-  background: linear-gradient(0deg, $bg-color 0%, transparentize($bg-color, 1) 100%)
-  width: 100%
-  pointer-events: none
-  z-index: 2
-
-#kanban
-  .row
-    flex-direction: row
-
-.table
   img
-    max-height: 15rem
+    max-height: 10rem
 
-  > .row
-    display: flex
-    flex-wrap: wrap
-    max-width: 50rem
-    @extend .centered
+#java-code
+  height: 64px
+  width: 200%
+  display: block
+  @include media-breakpoint-down(lg)
+    font-size: 70%
+    height: 48px
 
-    > *
-      min-width: 15rem
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-      margin-top: 4rem
-      padding: 0 1rem
-      width: 60%
-      @include mobile
-        margin-top: 2rem
+@include media-breakpoint-up(lg)
+  #skills
+    .text
+      width: 80%
 
-      &:last-child
-        width: 40%
+    .row > :first-child .text
+      margin-left: auto
 
-  &.reverse .row:nth-child(odd)
-    flex-direction: row-reverse
+footer a
+  color: inherit
 
-    & > *:first-child
-      width: 40%
+  &:hover
+    color: inherit
